@@ -8,17 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+    
+    @EnvironmentObject private var model: CryptoData
+    
+    private func populateDataClient() async {
+        do {
+            try await model.populateData()
+            print("done")
+        } catch {
+            print("error")
         }
-        .padding()
+    }
+    
+    var body: some View {
+        VStack{
+        
+            Home()
+            
+        }
+            .task {
+                await populateDataClient()
+            }
+            .onAppear {
+                print(model.$cryptodata)
+            }
+            .preferredColorScheme(.dark)
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView().environmentObject(CryptoData(webservice: WebService()))
 }

@@ -11,6 +11,12 @@
 		2AD5DEDC2C71962900834B15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD5DEDB2C71962900834B15 /* ContentView.swift */; };
 		2AD5DEDE2C71962B00834B15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD5DEDD2C71962B00834B15 /* Assets.xcassets */; };
 		2AD5DEE12C71962B00834B15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD5DEE02C71962B00834B15 /* Preview Assets.xcassets */; };
+		2AD5DEE82C71966B00834B15 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD5DEE72C71966B00834B15 /* Home.swift */; };
+		2AD5DEEA2C719B8400834B15 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD5DEE92C719B8400834B15 /* GraphView.swift */; };
+		2AD5DEED2C719C0700834B15 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD5DEEC2C719C0700834B15 /* CryptoModel.swift */; };
+		2AD5DEF12C71A63200834B15 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD5DEF02C71A63200834B15 /* WebService.swift */; };
+		2AD5DEF32C71A8FA00834B15 /* CryptoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD5DEF22C71A8FA00834B15 /* CryptoData.swift */; };
+		2AD5DEF62C71C57A00834B15 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2AD5DEF52C71C57A00834B15 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,11 @@
 		2AD5DEDB2C71962900834B15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2AD5DEDD2C71962B00834B15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AD5DEE02C71962B00834B15 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2AD5DEE72C71966B00834B15 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		2AD5DEE92C719B8400834B15 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		2AD5DEEC2C719C0700834B15 /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
+		2AD5DEF02C71A63200834B15 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		2AD5DEF22C71A8FA00834B15 /* CryptoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AD5DEF62C71C57A00834B15 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +63,13 @@
 		2AD5DED82C71962900834B15 /* TradeCharts */ = {
 			isa = PBXGroup;
 			children = (
+				2AD5DEEF2C71A61700834B15 /* WebService */,
+				2AD5DEEE2C719D7D00834B15 /* ViewModel */,
+				2AD5DEEB2C719BF600834B15 /* Model */,
 				2AD5DED92C71962900834B15 /* TradeChartsApp.swift */,
 				2AD5DEDB2C71962900834B15 /* ContentView.swift */,
+				2AD5DEE72C71966B00834B15 /* Home.swift */,
+				2AD5DEE92C719B8400834B15 /* GraphView.swift */,
 				2AD5DEDD2C71962B00834B15 /* Assets.xcassets */,
 				2AD5DEDF2C71962B00834B15 /* Preview Content */,
 			);
@@ -65,6 +82,30 @@
 				2AD5DEE02C71962B00834B15 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2AD5DEEB2C719BF600834B15 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2AD5DEEC2C719C0700834B15 /* CryptoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2AD5DEEE2C719D7D00834B15 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2AD5DEF22C71A8FA00834B15 /* CryptoData.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2AD5DEEF2C71A61700834B15 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				2AD5DEF02C71A63200834B15 /* WebService.swift */,
+			);
+			path = WebService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +124,9 @@
 			dependencies = (
 			);
 			name = TradeCharts;
+			packageProductDependencies = (
+				2AD5DEF52C71C57A00834B15 /* SDWebImageSwiftUI */,
+			);
 			productName = TradeCharts;
 			productReference = 2AD5DED62C71962900834B15 /* TradeCharts.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +155,9 @@
 				Base,
 			);
 			mainGroup = 2AD5DECD2C71962900834B15;
+			packageReferences = (
+				2AD5DEF42C71C57A00834B15 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 2AD5DED72C71962900834B15 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +184,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AD5DEF12C71A63200834B15 /* WebService.swift in Sources */,
+				2AD5DEEA2C719B8400834B15 /* GraphView.swift in Sources */,
 				2AD5DEDC2C71962900834B15 /* ContentView.swift in Sources */,
+				2AD5DEF32C71A8FA00834B15 /* CryptoData.swift in Sources */,
+				2AD5DEE82C71966B00834B15 /* Home.swift in Sources */,
 				2AD5DEDA2C71962900834B15 /* TradeChartsApp.swift in Sources */,
+				2AD5DEED2C719C0700834B15 /* CryptoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +396,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2AD5DEF42C71C57A00834B15 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2AD5DEF52C71C57A00834B15 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2AD5DEF42C71C57A00834B15 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2AD5DECE2C71962900834B15 /* Project object */;
 }
